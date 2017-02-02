@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
+	<!-- TODO Add Nodes -->
+</AnchorPane>
+
+<VBox fx:controller="application.Controller" xmlns:fx="http://javafx.com/fml">
+	<StackPane alignment="CENTER">
+		<Rectangle fill="TRANSPARENT" stroke="GRAY" width="250"></Rectangle>
+	</StackPane>
+</VBox>
