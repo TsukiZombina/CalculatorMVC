@@ -19,7 +19,6 @@ public class Controller {
     private void processAC(ActionEvent event) {
         if (start) {
             output.setText("0");
-            start = false;
         }
 
         String value = "0";
@@ -39,7 +38,16 @@ public class Controller {
 
     @FXML
     private void processOperator(ActionEvent event) {
-        String value = ((Button)event.getSource()).getText();
+    	if (start) {
+            output.setText("0");
+            start = false;
+        }
+    	
+    	if(output.getText() == ""){
+    		String value = "0";
+    	}
+    	
+    	String value = ((Button)event.getSource()).getText();
 
         if (!"=".equals(value)) {
             if (!operator.isEmpty())
