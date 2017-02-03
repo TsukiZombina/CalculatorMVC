@@ -55,8 +55,8 @@ public class Controller {
 		    output.setText("");
 		}
 		else {
-		    if (operator.isEmpty())
-		        return;
+		    if (operator.isEmpty() || output.getText().equals(""))
+		    	return;
 
 		    output.setText(String.valueOf(calc.calculate(number1, Double.parseDouble(output.getText()), operator)));
 		    operator = "";
