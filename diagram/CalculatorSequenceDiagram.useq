@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.13" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="application.Controller" project="Calculator" 
+    file="/Calculator/src/application/Controller.java" binary="false" label="controller" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="12" y="0"/>    
+    <execution id="2">      
+      <position height="235" width="79" x="5" y="120"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="application.Controller" project="Calculator" 
+    file="/Calculator/src/application/Controller.java" binary="false" label="controller1" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="178" y="0"/>    
+    <execution id="4">      
+      <position height="193" width="79" x="88" y="141"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="javafx.scene.text.Text" project="Calculator" 
+    file="C:/Program Files/Java/jre1.8.0_121/lib/ext/jfxrt.jar" binary="true" label="output" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="7">      
+      <position height="21" width="0" x="0" y="162"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" name="java.util.EventObject" project="Calculator" 
+    file="C:/Program Files/Java/jre1.8.0_121/lib/rt.jar" binary="true" label="event" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="9">      
+      <position height="21" width="0" x="0" y="204"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="javafx.scene.control.Button" project="Calculator" 
+    file="C:/Program Files/Java/jre1.8.0_121/lib/ext/jfxrt.jar" binary="true" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="11">      
+      <position height="21" width="0" x="0" y="246"/>    
+    </execution>  
+  </object>  
+  <object id="17" language="java" name="application.Calculator" project="Calculator" 
+    file="/Calculator/src/application/Calculator.java" binary="false" label="calc" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="13">      
+      <position height="21" width="0" x="0" y="292"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="processOperator(javafx.event.ActionEvent):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="setText(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="8" operation="getSource():java.lang.Object" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" operation="getText():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="calculate(double,double,java.lang.String):double" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>
+</sequence-diagram>

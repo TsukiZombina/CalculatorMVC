@@ -1,3 +1,12 @@
+/**
+* The Calculator program implements an application that
+* displays "a simple graphic calculator with +, -, *, / operands.
+*
+* @author  Zelzin Márquez
+* @version 1.0
+* @since   2017-02-03 
+*/
+
 package application;
 
 import javafx.event.ActionEvent;
@@ -16,6 +25,11 @@ public class Controller {
     private Calculator calc = new Calculator();
     
     @FXML
+    /**
+	   * This method is used to process the input of button AC
+	   * wich purposse is to clear the data from the "display"
+	   * @param event The event press button to process
+	   */
     private void processAC(ActionEvent event) {
         if (start) {
             output.setText("0");
@@ -26,6 +40,11 @@ public class Controller {
     }
     
     @FXML
+    /**
+	   * This method is used to process the input of pad numbers
+	   * that contains the value to use in the calculation
+	   * @param event The event press button to process
+	   */
     private void processNumpad(ActionEvent event) {
         if (start) {
             output.setText("");
@@ -37,6 +56,11 @@ public class Controller {
     }
 
     @FXML
+    /**
+	   * This method is used to process the input of pad operands
+	   * that contains the value to use in the calculation
+	   * @param event The event press button to process
+	   */
     private void processOperator(ActionEvent event) {
     	if (start) {
             output.setText("0");
