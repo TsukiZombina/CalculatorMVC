@@ -9,11 +9,11 @@ public class Controller {
 	@FXML
     private Text output;
 
-    private long number1 = 0;
+    private double number1 = 0;
     private String operator = "";
     private boolean start = true;
 
-    private Calculator model = new Calculator();
+    private Calculator calc = new Calculator();
     
     @FXML
     private void processAC(ActionEvent event) {
@@ -43,27 +43,24 @@ public class Controller {
             start = false;
         }
     	
-    	if(output.getText() == ""){
-    		String value = "0";
-    	}
-    	
     	String value = ((Button)event.getSource()).getText();
+    	
+    	if (!"=".equals(value)) {
+		    if (!operator.isEmpty()) 
+		    	if(output.getText().equals(""))
+		    		return;
 
-        if (!"=".equals(value)) {
-            if (!operator.isEmpty())
-                return;
+		    operator = value;
+		    number1 = Double.parseDouble(output.getText());
+		    output.setText("");
+		}
+		else {
+		    if (operator.isEmpty())
+		        return;
 
-            operator = value;
-            number1 = Long.parseLong(output.getText());
-            output.setText("");
-        }
-        else {
-            if (operator.isEmpty())
-                return;
-
-            output.setText(String.valueOf(model.calculate(number1, Long.parseLong(output.getText()), operator)));
-            operator = "";
-            start = true;
-        }
+		    output.setText(String.valueOf(calc.calculate(number1, Double.parseDouble(output.getText()), operator)));
+		    operator = "";
+		    start = true;
+		}
     }
 }
